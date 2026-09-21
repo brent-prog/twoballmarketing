@@ -1,0 +1,30 @@
+name: Replace TwoBall board asset
+
+on:
+  push:
+    paths:
+      - ".asset-staging/replacement-board-*"
+      - ".asset-staging/REPLACE_BOARD"
+
+permissions:
+  contents: write
+
+jobs:
+  replace-board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decode replacement board
+        run: |
+          mkdir -p public/images
+          cat .asset-staging/replacement-board-* | base64 -d > public/images/twoball-board.webp
+
+      - name: Commit replacement board
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/twoball-board.webp
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace TwoBall board with approved artwork"
+          git push
