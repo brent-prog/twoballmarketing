@@ -1,10 +1,24 @@
+import { AssetImage } from "@/components/AssetImage";
+
 export function Header() {
   return (
     <header className="site-header">
       <div className="shell header-inner">
         <a className="wordmark" href="/" aria-label="TwoBall Darts home">
-          <span className="wordmark-mark" aria-hidden="true" />
-          <span>TwoBall Darts</span>
+          <AssetImage
+            src="/brand/twoball-logo.png"
+            alt="TwoBall Darts"
+            width={440}
+            height={152}
+            className="header-logo"
+            priority
+            fallback={
+              <>
+                <span className="wordmark-mark" aria-hidden="true" />
+                <span>TwoBall Darts</span>
+              </>
+            }
+          />
         </a>
         <nav className="nav" aria-label="Primary">
           <a href="#how-to-play">HOW TO PLAY</a>
