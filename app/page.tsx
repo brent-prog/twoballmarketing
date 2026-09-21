@@ -25,7 +25,7 @@ export default function HomePage() {
             </div>
             <div className="hero-mark" aria-label="TwoBall Darts">
               <AssetImage
-                src="/brand/twoball-logo.png"
+                src="/brand/twoball-logo.webp"
                 alt="TwoBall Darts"
                 width={880}
                 height={304}
@@ -96,7 +96,7 @@ export default function HomePage() {
               <p className="section-intro dark-copy">TwoBall rewards accuracy without turning game night into a math test.</p>
               <div className="board-placeholder">
                 <AssetImage
-                  src="/images/twoball-board.png"
+                  src="/images/twoball-board.webp"
                   alt="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue"
                   width={1000}
                   height={1000}
