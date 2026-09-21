@@ -3,7 +3,7 @@ name: Install production assets
 on:
   push:
     paths:
-      - ".asset-source/**"
+      - ".asset-staging/**"
 
 permissions:
   contents: write
@@ -17,8 +17,8 @@ jobs:
       - name: Decode production assets
         run: |
           mkdir -p public/brand public/images
-          cat .asset-source/logo-part-* | base64 -d > public/brand/twoball-logo.webp
-          cat .asset-source/board-part-* | base64 -d > public/images/twoball-board.webp
+          cat .asset-staging/logo-b64-* | base64 -d > public/brand/twoball-logo.webp
+          cat .asset-staging/board-b64-* | base64 -d > public/images/twoball-board.webp
 
       - name: Commit production assets
         run: |
