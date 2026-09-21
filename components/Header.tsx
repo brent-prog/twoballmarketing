@@ -6,7 +6,7 @@ export function Header() {
       <div className="shell header-inner">
         <a className="wordmark" href="/" aria-label="TwoBall Darts home">
           <AssetImage
-            src="/brand/twoball-logo.png"
+            src="/brand/twoball-logo.webp"
             alt="TwoBall Darts"
             width={440}
             height={152}
