@@ -17,8 +17,8 @@ jobs:
       - name: Decode production assets
         run: |
           mkdir -p public/brand public/images
-          base64 -d .asset-source/twoball-logo.webp.b64 > public/brand/twoball-logo.webp
-          base64 -d .asset-source/twoball-board.webp.b64 > public/images/twoball-board.webp
+          cat .asset-source/logo-part-* | base64 -d > public/brand/twoball-logo.webp
+          cat .asset-source/board-part-* | base64 -d > public/images/twoball-board.webp
 
       - name: Commit production assets
         run: |
