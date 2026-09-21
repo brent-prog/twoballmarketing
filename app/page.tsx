@@ -1,8 +1,114 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
+import { scoring } from "@/data/scoring";
+import { rules } from "@/data/rules";
+import { howToSchema, siteSchema, brandSchema } from "@/lib/schema";
+
 export default function HomePage() {
   return (
-    <main>
-      <h1>TwoBall Darts</h1>
-      <p>Migration scaffold - current live site rebuild comes next.</p>
-    </main>
+    <>
+      <JsonLd data={[siteSchema, brandSchema, howToSchema]} />
+      <Header />
+      <main>
+        <section className="hero">
+          <div className="shell hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow">THE GAME HIDING IN YOUR DARTBOARD</p>
+              <h1>GOLF SCORING.<br />TWO DARTS.<br />EIGHTEEN HOLES.</h1>
+              <p className="lede">Play the numbers 1 through 18 as holes. Throw exactly two darts at each. Lowest score wins.</p>
+              <div className="cta-row">
+                <a className="button button-primary" href="https://play.twoballdarts.com">PLAY NOW</a>
+                <a className="button button-ghost" href="#how-to-play">Learn the game</a>
+              </div>
+            </div>
+            <div className="hero-mark" aria-label="TwoBall Darts">
+              <div className="target-icon" aria-hidden="true"><span /><span /><span /></div>
+              <div>
+                <strong>TwoBall</strong>
+                <span>Darts</span>
+              </div>
+            </div>
+          </div>
+          <div className="shell kicker-row">
+            <span>No gimmes. Just throw.</span>
+            <span className="mini-brand">TwoBall Darts</span>
+          </div>
+        </section>
+
+        <section className="stat-band">
+          <div className="shell stats">
+            <div><strong>18</strong><span>HOLES</span></div>
+            <div><strong>2</strong><span>DARTS</span></div>
+            <div><strong>3</strong><span>PAR</span></div>
+            <p>SAME DARTBOARD.<br /><strong>A COMPLETELY DIFFERENT GAME.</strong></p>
+          </div>
+        </section>
+
+        <section id="how-to-play" className="section light">
+          <div className="shell">
+            <p className="eyebrow dark">THE WHOLE GAME IN 30 SECONDS</p>
+            <h2>IF YOU CAN COUNT TO 18,<br />YOU CAN PLAY TWOBALL.</h2>
+            <div className="steps">
+              <article><b>01</b><h3>PICK THE HOLE</h3><p>Start at number 1 on the dartboard. That number is the only target that matters.</p></article>
+              <article><b>02</b><h3>THROW TWO DARTS</h3><p>Singles are good. Doubles and triples are better. Off the board or throwing into hazards hurts.</p></article>
+              <article><b>03</b><h3>SCORE IT LIKE GOLF</h3><p>Your two darts make an Eagle, Birdie, Par, Bogey, Double or Triple Bogey.</p></article>
+              <article><b>18</b><h3>FINISH THE COURSE</h3><p>Move through numbers 1 to 18. The player with the lowest total score wins.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section id="scoring" className="section score-section">
+          <div className="shell">
+            <p className="eyebrow">THE SCORECARD</p>
+            <h2>EVERY THROW MEANS SOMETHING.</h2>
+            <p className="section-intro">Better target hits lower your score. Hazards raise it. Every hole is par 3 and your worst possible score is Triple Bogey.</p>
+            <div className="score-grid">
+              {scoring.map((item) => (
+                <article className="score-card" key={item.name}>
+                  <div className="score-top"><h3>{item.name}</h3><strong>{item.relative}</strong></div>
+                  <p>{item.description}</p>
+                  <span>{item.strokes} {item.strokes === 1 ? "STROKE" : "STROKES"}</span>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="rules" className="section rules-section">
+          <div className="shell rules-grid">
+            <div>
+              <p className="eyebrow dark">NO RULEBOOK REQUIRED</p>
+              <h2>THE RULES YOU'LL<br />REMEMBER BY HOLE THREE.</h2>
+              <p className="section-intro dark-copy">TwoBall rewards accuracy without turning game night into a math test.</p>
+              <div className="board-placeholder" role="img" aria-label="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue">
+                <div className="board-ring">20<br /><span>TwoBall</span><br />19</div>
+              </div>
+              <p className="hazard-note"><strong>Blue means hazard.</strong> The complete 20 and 19 wedges and the bull are hazards.</p>
+            </div>
+            <ol className="rules-list">
+              {rules.map((rule, index) => (
+                <li key={rule}><b>{String(index + 1).padStart(2, "0")}</b><span>{rule}</span></li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className="final-cta">
+          <div className="shell final-grid">
+            <div>
+              <p className="eyebrow">18</p>
+              <h2>THE 19TH HOLE<br />STARTS HERE</h2>
+            </div>
+            <div>
+              <h3>YOUR DARTBOARD ALREADY HAS A GOLF COURSE ON IT.</h3>
+              <p>You just needed a game worth playing.</p>
+              <a className="button button-primary" href="https://play.twoballdarts.com">PLAY A ROUND</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
