@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { AssetImage } from "@/components/AssetImage";
 import { scoring } from "@/data/scoring";
 import { rules } from "@/data/rules";
 import { howToSchema, siteSchema, brandSchema } from "@/lib/schema";
@@ -23,11 +24,23 @@ export default function HomePage() {
               </div>
             </div>
             <div className="hero-mark" aria-label="TwoBall Darts">
-              <div className="target-icon" aria-hidden="true"><span /><span /><span /></div>
-              <div>
-                <strong>TwoBall</strong>
-                <span>Darts</span>
-              </div>
+              <AssetImage
+                src="/brand/twoball-logo.png"
+                alt="TwoBall Darts"
+                width={880}
+                height={304}
+                className="hero-logo"
+                priority
+                fallback={
+                  <>
+                    <div className="target-icon" aria-hidden="true"><span /><span /><span /></div>
+                    <div>
+                      <strong>TwoBall</strong>
+                      <span>Darts</span>
+                    </div>
+                  </>
+                }
+              />
             </div>
           </div>
           <div className="shell kicker-row">
@@ -81,8 +94,15 @@ export default function HomePage() {
               <p className="eyebrow dark">NO RULEBOOK REQUIRED</p>
               <h2>THE RULES YOU'LL<br />REMEMBER BY HOLE THREE.</h2>
               <p className="section-intro dark-copy">TwoBall rewards accuracy without turning game night into a math test.</p>
-              <div className="board-placeholder" role="img" aria-label="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue">
-                <div className="board-ring">20<br /><span>TwoBall</span><br />19</div>
+              <div className="board-placeholder">
+                <AssetImage
+                  src="/images/twoball-board.png"
+                  alt="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue"
+                  width={1000}
+                  height={1000}
+                  className="board-image"
+                  fallback={<div className="board-ring">20<br /><span>TwoBall</span><br />19</div>}
+                />
               </div>
               <p className="hazard-note"><strong>Blue means hazard.</strong> The complete 20 and 19 wedges and the bull are hazards.</p>
             </div>
