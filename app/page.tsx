@@ -13,7 +13,7 @@ export default function HomePage() {
       <Header />
       <main>
         <section className="hero">
-          <div className="shell hero-grid">
+          <div className="shell hero-inner">
             <div className="hero-copy">
               <p className="eyebrow">THE GAME HIDING IN YOUR DARTBOARD</p>
               <h1>GOLF SCORING.<br />TWO DARTS.<br />EIGHTEEN HOLES.</h1>
@@ -23,7 +23,9 @@ export default function HomePage() {
                 <a className="button button-ghost" href="#how-to-play">Learn the game</a>
               </div>
             </div>
-            <div className="hero-mark" aria-label="TwoBall Darts">
+
+            <div className="hero-bottom">
+              <p className="hero-tagline">No gimmes. Just throw.</p>
               <AssetImage
                 src="/brand/twoball-logo.webp"
                 alt="TwoBall Darts"
@@ -31,34 +33,26 @@ export default function HomePage() {
                 height={304}
                 className="hero-logo"
                 priority
-                fallback={
-                  <>
-                    <div className="target-icon" aria-hidden="true"><span /><span /><span /></div>
-                    <div>
-                      <strong>TwoBall</strong>
-                      <span>Darts</span>
-                    </div>
-                  </>
-                }
+                fallback={<strong className="hero-logo-fallback">TwoBall Darts</strong>}
               />
             </div>
-          </div>
-          <div className="shell kicker-row">
-            <span>No gimmes. Just throw.</span>
-            <span className="mini-brand">TwoBall Darts</span>
           </div>
         </section>
 
         <section className="stat-band">
           <div className="shell stats">
-            <div><strong>18</strong><span>HOLES</span></div>
-            <div><strong>2</strong><span>DARTS</span></div>
-            <div><strong>3</strong><span>PAR</span></div>
-            <p>SAME DARTBOARD.<br /><strong>A COMPLETELY DIFFERENT GAME.</strong></p>
+            <div className="stat"><strong>18</strong><span>HOLES</span></div>
+            <div className="stat"><strong>2</strong><span>DARTS</span></div>
+            <div className="stat"><strong>3</strong><span>PAR</span></div>
+            <div className="stat-statement">
+              <span>SAME DARTBOARD.</span>
+              <b>+</b>
+              <strong>A COMPLETELY DIFFERENT GAME.</strong>
+            </div>
           </div>
         </section>
 
-        <section id="how-to-play" className="section light">
+        <section id="how-to-play" className="section light how-section">
           <div className="shell">
             <p className="eyebrow dark">THE WHOLE GAME IN 30 SECONDS</p>
             <h2>IF YOU CAN COUNT TO 18,<br />YOU CAN PLAY TWOBALL.</h2>
@@ -72,15 +66,21 @@ export default function HomePage() {
         </section>
 
         <section id="scoring" className="section score-section">
-          <div className="shell">
-            <p className="eyebrow">THE SCORECARD</p>
-            <h2>EVERY THROW MEANS SOMETHING.</h2>
-            <p className="section-intro">Better target hits lower your score. Hazards raise it. Every hole is par 3 and your worst possible score is Triple Bogey.</p>
+          <div className="shell score-shell">
+            <div className="section-heading">
+              <p className="eyebrow">THE SCORECARD</p>
+              <h2>EVERY THROW<br />MEANS SOMETHING.</h2>
+              <p className="section-intro">Better target hits lower your score. Hazards raise it. Every hole is par 3 and your worst possible score is Triple Bogey.</p>
+            </div>
+
             <div className="score-grid">
               {scoring.map((item) => (
                 <article className="score-card" key={item.name}>
-                  <div className="score-top"><h3>{item.name}</h3><strong>{item.relative}</strong></div>
-                  <p>{item.description}</p>
+                  <div className="score-number">{item.relative}</div>
+                  <div className="score-copy">
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                  </div>
                   <span>{item.strokes} {item.strokes === 1 ? "STROKE" : "STROKES"}</span>
                 </article>
               ))}
@@ -89,26 +89,31 @@ export default function HomePage() {
         </section>
 
         <section id="rules" className="section rules-section">
-          <div className="shell rules-grid">
-            <div>
+          <div className="shell">
+            <div className="rules-heading">
               <p className="eyebrow dark">NO RULEBOOK REQUIRED</p>
               <h2>THE RULES YOU'LL<br />REMEMBER BY HOLE THREE.</h2>
               <p className="section-intro dark-copy">TwoBall rewards accuracy without turning game night into a math test.</p>
-              <div className="board-placeholder">
-                <AssetImage
-                  src="/images/twoball-board.webp"
-                  alt="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue"
-                  width={1000}
-                  height={1000}
-                  className="board-image"
-                  fallback={<div className="board-ring">20<br /><span>TwoBall</span><br />19</div>}
-                />
-              </div>
-              <p className="hazard-note"><strong>Blue means hazard.</strong> The complete 20 and 19 wedges and the bull are hazards.</p>
             </div>
+
+            <div className="board-wrap">
+              <AssetImage
+                src="/images/twoball-board.webp"
+                alt="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue"
+                width={1000}
+                height={1000}
+                className="board-image"
+                fallback={<div className="board-ring">TwoBall</div>}
+              />
+            </div>
+            <p className="hazard-note"><strong>Blue means hazard.</strong> The complete 20 and 19 wedges and the bull are hazards.</p>
+
             <ol className="rules-list">
               {rules.map((rule, index) => (
-                <li key={rule}><b>{String(index + 1).padStart(2, "0")}</b><span>{rule}</span></li>
+                <li key={rule}>
+                  <b>{String(index + 1).padStart(2, "0")}</b>
+                  <span>{rule}</span>
+                </li>
               ))}
             </ol>
           </div>
@@ -120,7 +125,7 @@ export default function HomePage() {
               <p className="eyebrow">18</p>
               <h2>THE 19TH HOLE<br />STARTS HERE</h2>
             </div>
-            <div>
+            <div className="final-copy">
               <h3>YOUR DARTBOARD ALREADY HAS A GOLF COURSE ON IT.</h3>
               <p>You just needed a game worth playing.</p>
               <a className="button button-primary" href="https://play.twoballdarts.com">PLAY A ROUND</a>
