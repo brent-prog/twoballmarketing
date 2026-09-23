@@ -178,8 +178,14 @@ h2 {
 .section { padding: 118px 0; }
 .light { background: var(--paper); color: var(--ink); }
 .how-section { border-bottom: 1px solid #d9d0b9; }
-.how-heading { max-width: 1120px; }
-.how-heading span { display: block; }
+.how-heading {
+  max-width: none;
+  font-size: clamp(54px, 5.7vw, 82px);
+}
+.how-heading span {
+  display: block;
+  white-space: nowrap;
+}
 .how-heading span:first-child { color: var(--ink); }
 .how-heading span:last-child { color: var(--red); }
 .steps {
@@ -417,6 +423,8 @@ h2 {
   .hero-grid { padding: 46px 0 36px; gap: 28px; }
   h1 { font-size: 54px; }
   h2 { font-size: 43px; }
+  .how-heading { font-size: 43px; }
+  .how-heading span { white-space: normal; }
   .lede, .section-intro { font-size: 17px; }
   .hero-visual { justify-items: center; }
   .hero-badge { width: min(380px, 92vw); }
