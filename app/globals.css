@@ -378,19 +378,32 @@ h2 {
   color: rgba(245,232,198,.58);
   font-size: 14px;
 }
-.footer-rockpail {
-  display: grid;
-  gap: 5px;
-  color: rgba(245,232,198,.68);
-  font-size: 11px;
-  letter-spacing: .13em;
+.footer-partners {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
 }
-.footer-rockpail strong {
-  color: var(--bright);
-  font-size: 16px;
-  letter-spacing: .08em;
+.footer-partner-link {
+  display: inline-flex;
+  align-items: center;
+  opacity: .88;
+  transition: opacity .15s ease, transform .15s ease;
 }
-.footer-rockpail a { margin-top: 10px; letter-spacing: .02em; }
+.footer-partner-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.footer-rockpail-logo {
+  width: 155px;
+  height: auto;
+  display: block;
+}
+.footer-kfs-logo {
+  width: 92px;
+  height: auto;
+  display: block;
+}
 .footer-meta {
   text-align: right;
   color: rgba(245,232,198,.58);
