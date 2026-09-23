@@ -1,0 +1,28 @@
+name: Install footer logos
+
+on:
+  push:
+    paths:
+      - ".asset-staging/rockpail-footer.b64"
+      - ".asset-staging/FOOTER_LOGOS_READY"
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode RockPail logo
+        run: |
+          mkdir -p public/brand
+          base64 -d .asset-staging/rockpail-footer.b64 > public/brand/rockpail-production-white.png
+      - name: Commit footer asset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/brand/rockpail-production-white.png
+          git diff --cached --quiet && exit 0
+          git commit -m "Add RockPail footer logo"
+          git push
