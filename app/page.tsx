@@ -16,7 +16,7 @@ export default function HomePage() {
           <div className="shell hero-inner">
             <div className="hero-copy">
               <p className="eyebrow">THE GAME HIDING IN YOUR DARTBOARD</p>
-              <h1>GOLF SCORING.<br />TWO DARTS.<br />EIGHTEEN HOLES.</h1>
+              <h1><span className="hero-line hero-line-ivory">GOLF SCORING.</span><span className="hero-line hero-line-red">TWO DARTS.</span><span className="hero-line hero-line-gold">EIGHTEEN HOLES.</span></h1>
               <p className="lede">Play the numbers 1 through 18 as holes. Throw exactly two darts at each. Lowest score wins.</p>
               <div className="cta-row">
                 <a className="button button-primary" href="https://play.twoballdarts.com">PLAY NOW</a>
@@ -27,11 +27,11 @@ export default function HomePage() {
             <div className="hero-bottom">
               <p className="hero-tagline">No gimmes. Just throw.</p>
               <AssetImage
-                src="/brand/twoball-logo.webp"
-                alt="TwoBall Darts"
-                width={880}
-                height={304}
-                className="hero-logo"
+                src="/brand/twoball-badge.webp"
+                alt="TwoBall Darts badge"
+                width={1294}
+                height={1216}
+                className="hero-badge"
                 priority
                 fallback={<strong className="hero-logo-fallback">TwoBall Darts</strong>}
               />
