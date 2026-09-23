@@ -98,15 +98,15 @@ h3,
 .rules-list b,
 .footer-rockpail,
 .footer-partners {
-  font-family: var(--font-display), Impact, "Arial Narrow", sans-serif;
+  font-family: var(--font-display), "Arial Black", Arial, sans-serif;
   font-weight: 400;
 }
 
 h1 {
   margin: 0 0 28px;
   font-size: clamp(62px, 7.2vw, 108px);
-  line-height: .78;
-  letter-spacing: -.065em;
+  line-height: .86;
+  letter-spacing: -.045em;
   font-weight: 400;
 }
 .hero-line { display: block; }
@@ -115,8 +115,8 @@ h1 {
 h2 {
   margin: 0 0 30px;
   font-size: clamp(48px, 6.6vw, 88px);
-  line-height: .88;
-  letter-spacing: -.055em;
+  line-height: .9;
+  letter-spacing: -.04em;
   font-weight: 400;
 }
 .lede,
