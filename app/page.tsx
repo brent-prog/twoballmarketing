@@ -86,23 +86,25 @@ export default function HomePage() {
 
         <section id="rules" className="section rules-section">
           <div className="shell">
-            <div className="rules-heading">
-              <p className="eyebrow dark">NO RULEBOOK REQUIRED</p>
-              <h2>THE RULES YOU'LL<br />REMEMBER BY HOLE THREE.</h2>
-              <p className="section-intro dark-copy">TwoBall rewards accuracy without turning game night into a math test.</p>
-            </div>
+            <div className="rules-feature">
+              <div className="rules-heading">
+                <p className="eyebrow dark">NO RULEBOOK REQUIRED</p>
+                <h2>THE RULES YOU'LL<br />REMEMBER BY HOLE THREE.</h2>
+                <p className="section-intro dark-copy">TwoBall rewards accuracy without turning game night into a math test.</p>
+                <p className="hazard-note"><strong>Blue means hazard.</strong> The complete 20 and 19 wedges and the bull are hazards.</p>
+              </div>
 
-            <div className="board-wrap">
-              <AssetImage
-                src="/images/twoball-board.webp"
-                alt="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue"
-                width={1000}
-                height={1000}
-                className="board-image"
-                fallback={<div className="board-ring">TwoBall</div>}
-              />
+              <div className="board-wrap">
+                <AssetImage
+                  src="/images/twoball-board.webp"
+                  alt="Official TwoBall dartboard with the complete 20 wedge, complete 19 wedge, and bull marked blue"
+                  width={1000}
+                  height={1000}
+                  className="board-image"
+                  fallback={<div className="board-ring">TwoBall</div>}
+                />
+              </div>
             </div>
-            <p className="hazard-note"><strong>Blue means hazard.</strong> The complete 20 and 19 wedges and the bull are hazards.</p>
 
             <ol className="rules-list">
               {rules.map((rule, index) => (
