@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   description:
     "Play golf on a dartboard. Two darts per hole, eighteen holes, lowest score wins.",
   alternates: { canonical: "/" },
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     url: siteUrl,
