@@ -23,7 +23,7 @@ export default function HomePage() {
               </h1>
               <p className="lede">Play the numbers 1 through 18 as holes. Throw exactly two darts at each. Lowest score wins.</p>
               <div className="cta-row">
-                <a className="button button-primary" href="https://play.twoballdarts.com">PLAY NOW</a>
+                <a className="button button-primary" href="https://play.twoballdarts.com" target="_blank" rel="noreferrer">PLAY NOW</a>
                 <a className="button button-ghost" href="#how-to-play">Learn the game</a>
               </div>
             </div>
@@ -127,6 +127,8 @@ export default function HomePage() {
             <a
               className="button merch-button"
               href="https://keepfunsimple.com/shop/twoball"
+              target="_blank"
+              rel="noreferrer"
             >
               SHOP TWOBALL
             </a>
@@ -141,7 +143,7 @@ export default function HomePage() {
             <div className="final-copy">
               <h3>YOUR DARTBOARD ALREADY HAS A GOLF COURSE ON IT.</h3>
               <p>You just needed a game worth playing.</p>
-              <a className="button button-primary" href="https://play.twoballdarts.com">PLAY A ROUND</a>
+              <a className="button button-primary" href="https://play.twoballdarts.com" target="_blank" rel="noreferrer">PLAY A ROUND</a>
             </div>
           </div>
         </section>
