@@ -118,8 +118,7 @@ export default function HomePage() {
         <section className="final-cta">
           <div className="shell final-grid">
             <div>
-              <p className="eyebrow">18</p>
-              <h2>THE 19TH HOLE<br />STARTS HERE</h2>
+              <h2>READY TO<br />PLAY A ROUND?</h2>
             </div>
             <div className="final-copy">
               <h3>YOUR DARTBOARD ALREADY HAS A GOLF COURSE ON IT.</h3>
