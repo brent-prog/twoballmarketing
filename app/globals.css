@@ -178,6 +178,10 @@ h2 {
 .section { padding: 118px 0; }
 .light { background: var(--paper); color: var(--ink); }
 .how-section { border-bottom: 1px solid #d9d0b9; }
+.how-heading { max-width: 1120px; }
+.how-heading span { display: block; }
+.how-heading span:first-child { color: var(--ink); }
+.how-heading span:last-child { color: var(--red); }
 .steps {
   margin-top: 58px;
   display: grid;
