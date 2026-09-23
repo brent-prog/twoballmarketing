@@ -24,7 +24,7 @@ export function Header() {
           <a href="#how-to-play">HOW TO PLAY</a>
           <a href="#scoring">SCORING</a>
           <a href="#rules">THE RULES</a>
-          <a className="nav-play" href="https://play.twoballdarts.com">PLAY NOW</a>
+          <a className="nav-play" href="https://play.twoballdarts.com" target="_blank" rel="noreferrer">PLAY NOW</a>
         </nav>
       </div>
     </header>
