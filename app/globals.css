@@ -334,6 +334,40 @@ h2 {
   font-size: 20px;
 }
 
+.faq-section {
+  background: #f8f3e6;
+  color: var(--ink);
+  border-top: 1px solid #d9d0b9;
+}
+.faq-shell {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 82px;
+  align-items: start;
+}
+.faq-heading {
+  position: sticky;
+  top: 110px;
+}
+.faq-list {
+  border-top: 1px solid #cfc5ae;
+}
+.faq-list article {
+  padding: 25px 0;
+  border-bottom: 1px solid #cfc5ae;
+}
+.faq-list h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: -.015em;
+}
+.faq-list p {
+  margin: 0;
+  color: #536057;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .merch-cta {
   background: var(--red);
   color: #fff;
@@ -465,6 +499,8 @@ h2 {
   .rules-feature { grid-template-columns: 1fr; gap: 36px; }
   .board-wrap { justify-self: center; width: min(520px, 82vw); }
   .rules-list { grid-template-columns: 1fr; }
+  .faq-shell { grid-template-columns: 1fr; gap: 38px; }
+  .faq-heading { position: static; }
   .merch-cta-inner { align-items: flex-start; flex-direction: column; gap: 28px; }
   .final-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
