@@ -334,6 +334,47 @@ h2 {
   font-size: 20px;
 }
 
+.merch-cta {
+  background: var(--red);
+  color: #fff;
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+.merch-cta-inner {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+.merch-cta h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(48px, 6vw, 78px);
+}
+.merch-cta p {
+  margin: 0;
+  font-size: 18px;
+  color: rgba(255,255,255,.82);
+}
+.merch-eyebrow {
+  margin-bottom: 16px !important;
+  color: rgba(255,255,255,.7) !important;
+}
+.merch-button {
+  flex: 0 0 auto;
+  background: #02140f;
+  color: var(--bright);
+  border: 1px solid #02140f;
+  padding-inline: 28px;
+}
+.merch-button:hover {
+  background: #fff;
+  color: var(--red);
+  border-color: #fff;
+}
+
 .final-cta {
   padding: 112px 0;
   background: #02140f;
@@ -424,6 +465,7 @@ h2 {
   .rules-feature { grid-template-columns: 1fr; gap: 36px; }
   .board-wrap { justify-self: center; width: min(520px, 82vw); }
   .rules-list { grid-template-columns: 1fr; }
+  .merch-cta-inner { align-items: flex-start; flex-direction: column; gap: 28px; }
   .final-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-meta { text-align: left; }
