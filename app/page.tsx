@@ -51,7 +51,7 @@ export default function HomePage() {
         <section id="how-to-play" className="section light how-section">
           <div className="shell">
             <p className="eyebrow dark">THE WHOLE GAME IN 30 SECONDS</p>
-            <h2>IF YOU CAN COUNT TO 18,<br />YOU CAN PLAY TWOBALL.</h2>
+            <h2 className="how-heading"><span>IF YOU CAN COUNT TO 18</span><span>YOU CAN PLAY TWOBALL.</span></h2>
             <div className="steps">
               <article><b>01</b><h3>PICK THE HOLE</h3><p>Start at number 1 on the dartboard. That number is the only target that matters.</p></article>
               <article><b>02</b><h3>THROW TWO DARTS</h3><p>Singles are good. Doubles and triples are better. Off the board or throwing into hazards hurts.</p></article>
