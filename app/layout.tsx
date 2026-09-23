@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description:
     "TwoBall Darts is a golf-style darts game played over 18 holes with exactly two darts per hole. Learn the rules, scoring and hazards, then play online.",
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/brand/twoball-badge.webp",
+    shortcut: "/brand/twoball-badge.webp",
+    apple: "/brand/twoball-badge.webp",
+  },
   category: "games",
   openGraph: {
     type: "website",
