@@ -88,8 +88,11 @@ h1 {
   line-height: .82;
   letter-spacing: -.065em;
   font-weight: 950;
-  color: var(--bright);
 }
+.hero-line { display: block; }
+.hero-line-ivory { color: var(--bright); }
+.hero-line-red { color: #ef2b22; }
+.hero-line-gold { color: #e0b950; }
 h2 {
   margin: 0 0 30px;
   font-size: clamp(48px, 6.6vw, 88px);
@@ -137,10 +140,11 @@ h2 {
   font-size: 16px;
   color: rgba(245,232,198,.72);
 }
-.hero-logo {
-  width: min(410px, 46vw);
+.hero-badge {
+  width: min(330px, 34vw);
   height: auto;
   display: block;
+  filter: drop-shadow(0 18px 26px rgba(0,0,0,.26));
 }
 .hero-logo-fallback { font-size: 30px; }
 
@@ -424,7 +428,7 @@ h2 {
     flex-direction: column;
     gap: 24px;
   }
-  .hero-logo { width: min(320px, 88vw); }
+  .hero-badge { width: min(280px, 74vw); }
   .stats { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .stat strong { font-size: 38px; }
   .stat-statement {
