@@ -4,12 +4,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { AssetImage } from "@/components/AssetImage";
 import { scoring } from "@/data/scoring";
 import { rules } from "@/data/rules";
-import { howToSchema, siteSchema, brandSchema } from "@/lib/schema";
+import { howToSchema, siteSchema, brandSchema, gameSchema, faqSchema } from "@/lib/schema";
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={[siteSchema, brandSchema, howToSchema]} />
+      <JsonLd data={[siteSchema, brandSchema, gameSchema, howToSchema, faqSchema]} />
       <Header />
       <main>
         <section className="hero">
@@ -114,6 +114,41 @@ export default function HomePage() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section id="faq" className="section faq-section">
+          <div className="shell faq-shell">
+            <div className="faq-heading">
+              <p className="eyebrow dark">QUICK ANSWERS</p>
+              <h2>WHAT IS<br />TWOBALL DARTS?</h2>
+              <p className="section-intro dark-copy">
+                TwoBall Darts is a golf-style darts game played on a standard dartboard. Play numbers 1 through 18 as holes, throw exactly two darts per hole, and finish with the lowest score.
+              </p>
+            </div>
+
+            <div className="faq-list">
+              <article>
+                <h3>WHAT DO YOU NEED TO PLAY?</h3>
+                <p>A standard dartboard and two darts per player. That&apos;s it.</p>
+              </article>
+              <article>
+                <h3>HOW MANY DARTS DO YOU THROW?</h3>
+                <p>Exactly two darts per player on every hole.</p>
+              </article>
+              <article>
+                <h3>HOW MANY HOLES ARE THERE?</h3>
+                <p>18. Play dartboard numbers 1 through 18 in order.</p>
+              </article>
+              <article>
+                <h3>WHAT ARE THE HAZARDS?</h3>
+                <p>The complete 19 wedge, complete 20 wedge and the bull. Completely off the board is also a hazard.</p>
+              </article>
+              <article>
+                <h3>HOW DO YOU WIN?</h3>
+                <p>Lowest total score after 18 holes wins.</p>
+              </article>
+            </div>
           </div>
         </section>
 
