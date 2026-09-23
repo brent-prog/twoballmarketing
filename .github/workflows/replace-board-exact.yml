@@ -1,0 +1,28 @@
+name: Replace board asset
+
+on:
+  push:
+    paths:
+      - ".asset-staging/board-replacement.b64"
+      - ".asset-staging/BOARD_REPLACE_READY"
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode board
+        run: |
+          mkdir -p public/images
+          base64 -d .asset-staging/board-replacement.b64 > public/images/twoball-board.webp
+      - name: Commit board
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/twoball-board.webp
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace rules board with exact supplied image"
+          git push
