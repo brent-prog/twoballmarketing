@@ -16,10 +16,40 @@ export function Footer() {
           <p>No gimmes. Just throw.</p>
         </div>
 
-        <div className="footer-rockpail">
-          <span>ROCKPAIL PRODUCTION</span>
-          <strong>KEEP FUN SIMPLE</strong>
-          <a href="https://rockpail.com">Visit RockPail</a>
+        <div className="footer-partners">
+          <a
+            className="footer-partner-link"
+            href="https://rockpail.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit RockPail"
+          >
+            <AssetImage
+              src="/brand/rockpail-production-white.png"
+              alt="A RockPail Production"
+              width={2048}
+              height={980}
+              className="footer-rockpail-logo"
+              fallback={<strong>RockPail</strong>}
+            />
+          </a>
+
+          <a
+            className="footer-partner-link"
+            href="https://keepfunsimple.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit Keep Fun Simple"
+          >
+            <AssetImage
+              src="/brand/keepfunsimple-logo-white.svg"
+              alt="Keep Fun Simple"
+              width={1129}
+              height={1026}
+              className="footer-kfs-logo"
+              fallback={<strong>Keep Fun Simple</strong>}
+            />
+          </a>
         </div>
 
         <div className="footer-meta">
