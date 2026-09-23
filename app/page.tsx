@@ -117,6 +117,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="merch-cta">
+          <div className="shell merch-cta-inner">
+            <div>
+              <p className="eyebrow merch-eyebrow">KEEP FUN SIMPLE</p>
+              <h2>TWOBALL MERCH.</h2>
+              <p>Shirts, hats and gear. All over at Keep Fun Simple.</p>
+            </div>
+            <a
+              className="button merch-button"
+              href="https://keepfunsimple.com/shop/twoball"
+            >
+              SHOP TWOBALL
+            </a>
+          </div>
+        </section>
+
         <section className="final-cta">
           <div className="shell final-grid">
             <div>
