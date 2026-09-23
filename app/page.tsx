@@ -13,10 +13,14 @@ export default function HomePage() {
       <Header />
       <main>
         <section className="hero">
-          <div className="shell hero-inner">
+          <div className="shell hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">THE GAME HIDING IN YOUR DARTBOARD</p>
-              <h1><span className="hero-line hero-line-ivory">GOLF SCORING.</span><span className="hero-line hero-line-red">TWO DARTS.</span><span className="hero-line hero-line-gold">EIGHTEEN HOLES.</span></h1>
+              <h1>
+                <span className="hero-line hero-line-ivory">GOLF SCORING.</span>
+                <span className="hero-line hero-line-red">TWO DARTS.</span>
+                <span className="hero-line hero-line-ivory">EIGHTEEN HOLES.</span>
+              </h1>
               <p className="lede">Play the numbers 1 through 18 as holes. Throw exactly two darts at each. Lowest score wins.</p>
               <div className="cta-row">
                 <a className="button button-primary" href="https://play.twoballdarts.com">PLAY NOW</a>
@@ -24,8 +28,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hero-bottom">
-              <p className="hero-tagline">No gimmes. Just throw.</p>
+            <div className="hero-visual">
               <AssetImage
                 src="/brand/twoball-badge.webp"
                 alt="TwoBall Darts badge"
@@ -35,19 +38,12 @@ export default function HomePage() {
                 priority
                 fallback={<strong className="hero-logo-fallback">TwoBall Darts</strong>}
               />
-            </div>
-          </div>
-        </section>
 
-        <section className="stat-band">
-          <div className="shell stats">
-            <div className="stat"><strong>18</strong><span>HOLES</span></div>
-            <div className="stat"><strong>2</strong><span>DARTS</span></div>
-            <div className="stat"><strong>3</strong><span>PAR</span></div>
-            <div className="stat-statement">
-              <span>SAME DARTBOARD.</span>
-              <b>+</b>
-              <strong>A COMPLETELY DIFFERENT GAME.</strong>
+              <div className="hero-stats" aria-label="Game format">
+                <div><strong>18</strong><span>HOLES</span></div>
+                <div><strong>2</strong><span>DARTS</span></div>
+                <div><strong>3</strong><span>PAR</span></div>
+              </div>
             </div>
           </div>
         </section>
