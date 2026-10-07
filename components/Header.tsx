@@ -5,7 +5,7 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <a className="wordmark" href="/" aria-label="TwoBall Darts home">
-          <span className="brand-logo-lockup">
+          <span className="brand-logo-lockup" style={{ position: "relative", display: "inline-block", lineHeight: 0 }}>
           <AssetImage
             src="/brand/twoball-logo.webp"
             alt="TwoBall Darts™"
@@ -20,7 +20,7 @@ export function Header() {
               </>
             }
           />
-          <span className="brand-tm" aria-hidden="true">™</span>
+          <span className="brand-tm" aria-hidden="true" style={{ position: "absolute", top: "-3px", right: "-10px", color: "#f5e8c6", fontSize: "9px", lineHeight: 1, fontWeight: 700 }}>™</span>
           </span>
         </a>
         <nav className="nav" aria-label="Primary">
