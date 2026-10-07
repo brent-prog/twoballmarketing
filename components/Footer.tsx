@@ -5,14 +5,17 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div className="footer-brand">
+          <span className="footer-logo-lockup" style={{ position: "relative", display: "inline-block", lineHeight: 0 }}>
           <AssetImage
             src="/brand/twoball-logo.webp"
-            alt="TwoBall Darts"
+            alt="TwoBall Darts™"
             width={440}
             height={152}
             className="footer-logo"
-            fallback={<strong>TwoBall Darts</strong>}
+            fallback={<strong>TwoBall Darts™</strong>}
           />
+          <span aria-hidden="true" style={{ position: "absolute", top: "1px", right: "31px", color: "#f5e8c6", fontSize: "11px", lineHeight: 1, fontWeight: 700 }}>™</span>
+          </span>
           <p>No gimmes. Just throw.</p>
         </div>
 
