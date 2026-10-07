@@ -5,12 +5,11 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <a className="wordmark" href="/" aria-label="TwoBall Darts home">
-          <span className="brand-logo-lockup" style={{ position: "relative", display: "inline-block", lineHeight: 0 }}>
           <AssetImage
-            src="/brand/twoball-logo.webp"
+            src="/brand/twoball-logo-tm.svg"
             alt="TwoBall Darts™"
-            width={440}
-            height={152}
+            width={2048}
+            height={762}
             className="header-logo"
             priority
             fallback={
@@ -20,8 +19,6 @@ export function Header() {
               </>
             }
           />
-          <span className="brand-tm" aria-hidden="true" style={{ position: "absolute", top: "5px", right: "19px", color: "#f5e8c6", fontSize: "10px", lineHeight: 1, fontWeight: 700 }}>™</span>
-          </span>
         </a>
         <nav className="nav" aria-label="Primary">
           <a href="#how-to-play">HOW TO PLAY</a>
