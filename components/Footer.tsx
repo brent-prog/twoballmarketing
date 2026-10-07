@@ -14,7 +14,7 @@ export function Footer() {
             className="footer-logo"
             fallback={<strong>TwoBall Darts™</strong>}
           />
-          <span aria-hidden="true" style={{ position: "absolute", top: "1px", right: "31px", color: "#f5e8c6", fontSize: "11px", lineHeight: 1, fontWeight: 700 }}>™</span>
+          <span aria-hidden="true" style={{ position: "absolute", top: "6px", right: "22px", color: "#f5e8c6", fontSize: "12px", lineHeight: 1, fontWeight: 700 }}>™</span>
           </span>
           <p>No gimmes. Just throw.</p>
         </div>
