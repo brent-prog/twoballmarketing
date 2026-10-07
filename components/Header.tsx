@@ -5,9 +5,10 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <a className="wordmark" href="/" aria-label="TwoBall Darts home">
+          <span className="brand-logo-lockup">
           <AssetImage
             src="/brand/twoball-logo.webp"
-            alt="TwoBall Darts"
+            alt="TwoBall Darts™"
             width={440}
             height={152}
             className="header-logo"
@@ -15,10 +16,12 @@ export function Header() {
             fallback={
               <>
                 <span className="wordmark-mark" aria-hidden="true" />
-                <span>TwoBall Darts</span>
+                <span>TwoBall Darts™</span>
               </>
             }
           />
+          <span className="brand-tm" aria-hidden="true">™</span>
+          </span>
         </a>
         <nav className="nav" aria-label="Primary">
           <a href="#how-to-play">HOW TO PLAY</a>
