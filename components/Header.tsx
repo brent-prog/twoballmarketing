@@ -20,7 +20,7 @@ export function Header() {
               </>
             }
           />
-          <span className="brand-tm" aria-hidden="true" style={{ position: "absolute", top: "8px", right: "7px", color: "#f5e8c6", fontSize: "10px", lineHeight: 1, fontWeight: 700 }}>™</span>
+          <span className="brand-tm" aria-hidden="true" style={{ position: "absolute", top: "5px", right: "19px", color: "#f5e8c6", fontSize: "10px", lineHeight: 1, fontWeight: 700 }}>™</span>
           </span>
         </a>
         <nav className="nav" aria-label="Primary">
