@@ -9,6 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://twoballdarts.com/story",
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
       url: "https://twoballdarts.com/golf-darts",
       changeFrequency: "monthly",
       priority: 0.9,
