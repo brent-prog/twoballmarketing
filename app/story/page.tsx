@@ -147,7 +147,7 @@ export default function StoryPage() {
               <p className="story-deck">Two darts. Eighteen holes.<br /><strong>One hell of a good time.</strong></p>
               <p className="story-intro">A couple of guys. A garage. A dartboard. And a Thursday-night idea that turned into something worth sharing.</p>
             </div>
-            <AssetImage src="/brand/twoball-badge.webp" alt="TwoBall Darts" width={1294} height={1216} className="story-hero-mark" />
+            <AssetImage src="/brand/twoball-logo.webp" alt="TwoBall Darts" width={1294} height={1216} className="story-hero-mark" fallback={<strong>TwoBall Darts</strong>} />
           </div>
         </div>
 
