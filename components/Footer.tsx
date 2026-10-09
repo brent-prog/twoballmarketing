@@ -5,6 +5,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div className="footer-brand">
+          <a href="/" aria-label="TwoBall Darts home" style={{ display: "inline-block" }}>
           <AssetImage
             src="/brand/twoball-logo-tm.svg"
             alt="TwoBall Darts™"
@@ -13,6 +14,7 @@ export function Footer() {
             className="footer-logo"
             fallback={<strong>TwoBall Darts™</strong>}
           />
+          </a>
           <p>No gimmes. Just throw.</p>
           <a href="/story" style={{ display: "inline-block", marginTop: 12, color: "var(--cream)", fontSize: 13, textDecoration: "underline", textUnderlineOffset: 4 }}>Our Story</a>
         </div>
