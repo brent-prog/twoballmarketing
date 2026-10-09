@@ -161,6 +161,19 @@ export default function StoryPage() {
                 </div>
                 <div className="story-prose">
                   {chapter.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+                  {index === 4 && (
+                    <figure className="story-board-figure">
+                      <AssetImage
+                        src="/images/twoball-board.webp"
+                        alt="TwoBall custom golf dartboard showing the blue water hazards on 19, 20 and the bullseye"
+                        width={1200}
+                        height={1200}
+                        className="story-board-image"
+                        fallback={<div className="story-board-fallback">TwoBall Darts golf course</div>}
+                      />
+                      <figcaption>18 holes. One river to avoid. Same dartboard, whole new game.</figcaption>
+                    </figure>
+                  )}
                   {"pull" in chapter && <blockquote>{chapter.pull}</blockquote>}
                 </div>
               </div>
@@ -206,6 +219,10 @@ export default function StoryPage() {
         .story-prose p { font-size: 18px; line-height: 1.76; margin: 0 0 22px; }
         .story-prose p:last-child { margin-bottom: 0; }
         .story-prose blockquote { margin: 40px 0 0; border-left: 5px solid var(--red); padding: 10px 0 10px 24px; font-family: var(--font-display),Arial,sans-serif; font-size: clamp(27px,3vw,43px); line-height: 1.12; color: var(--gold); }
+        .story-board-figure { margin: 40px 0 12px; text-align: center; }
+        .story-board-image { display: block; width: min(100%, 570px); height: auto; margin: 0 auto; }
+        .story-board-fallback { padding: 65px 15px; border: 1px solid currentColor; }
+        .story-board-figure figcaption { margin-top: 14px; font-size: 13px; line-height: 1.5; opacity: .75; }
         .story-outro { padding: 120px 0 105px; background: linear-gradient(135deg,#02140f,#063927); }
         .story-outro-inner { max-width: 970px; }
         .story-outro h2 { font-size: clamp(53px,8vw,105px); }
