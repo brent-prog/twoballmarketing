@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: "TwoBall Darts",
   title: {
-    default: "TwoBall Darts | How to Play Golf on a Dartboard",
+    default: "Golf Darts: How to Play Golf on a Dartboard | TwoBall Darts",
     template: "%s | TwoBall Darts",
   },
   description:
@@ -32,6 +32,15 @@ export const metadata: Metadata = {
     shortcut: "/two-ball-darts-favicon-clean.svg?v=4",
   },
   category: "games",
+  keywords: [
+    "golf darts",
+    "darts golf",
+    "golf on a dartboard",
+    "golf darts rules",
+    "golf darts scoring",
+    "dartboard golf",
+    "TwoBall Darts",
+  ],
   openGraph: {
     type: "website",
     url: siteUrl,
