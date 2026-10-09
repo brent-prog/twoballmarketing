@@ -14,7 +14,6 @@ export function Footer() {
             fallback={<strong>TwoBall Darts™</strong>}
           />
           <p>No gimmes. Just throw.</p>
-          <a href="/golf-darts" style={{ display: "inline-block", marginTop: 14, color: "var(--gold)", fontSize: 13, textDecoration: "underline", textUnderlineOffset: 3 }}>Golf darts rules &amp; scoring</a>
         </div>
 
         <div className="footer-partners">
