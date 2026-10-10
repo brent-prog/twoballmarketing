@@ -4,6 +4,7 @@ export const siteSchema = {
   "@id": "https://twoballdarts.com/#website",
   url: "https://twoballdarts.com/",
   name: "TwoBall Darts",
+  alternateName: ["Two Ball Darts", "2 Ball Darts", "2Ball Darts"],
   description:
     "TwoBall Darts is a golf-style darts game played over 18 holes with exactly two darts per hole.",
   inLanguage: "en",
@@ -14,6 +15,7 @@ export const brandSchema = {
   "@type": "Brand",
   "@id": "https://twoballdarts.com/#brand",
   name: "TwoBall Darts",
+  alternateName: ["Two Ball Darts", "2 Ball Darts", "2Ball Darts"],
   url: "https://twoballdarts.com/",
   logo: "https://twoballdarts.com/brand/twoball-badge.webp",
 };
@@ -23,6 +25,7 @@ export const gameSchema = {
   "@type": "Game",
   "@id": "https://twoballdarts.com/#game",
   name: "TwoBall Darts",
+  alternateName: ["Two Ball Darts", "2 Ball Darts", "2Ball Darts"],
   url: "https://twoballdarts.com/",
   image: "https://twoballdarts.com/brand/twoball-badge.webp",
   description:
