@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     "golf darts scoring",
     "dartboard golf",
     "TwoBall Darts",
+    "Two Ball Darts",
+    "2 Ball Darts",
+    "2Ball Darts",
   ],
   openGraph: {
     type: "website",
