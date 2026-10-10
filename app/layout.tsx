@@ -50,9 +50,9 @@ export const metadata: Metadata = {
       "Turn a standard dartboard into an 18-hole golf course. Two darts per hole. Lowest score wins.",
     images: [
       {
-        url: "/brand/twoball-logo.webp",
-        width: 1294,
-        height: 1216,
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
         alt: "TwoBall Darts",
       },
     ],
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "TwoBall Darts | Golf Scoring on a Dartboard",
     description:
       "Turn a standard dartboard into an 18-hole golf course. Two darts per hole. Lowest score wins.",
-    images: ["/brand/twoball-logo.webp"],
+    images: ["/opengraph-image"],
   },
 };
 
