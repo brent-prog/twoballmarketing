@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Two darts. Eighteen holes. One hell of a good time. The real story behind TwoBall Darts.",
     url: "https://twoballdarts.com/story",
     type: "article",
-    images: [{ url: "/brand/twoball-logo.webp", width: 1294, height: 1216, alt: "TwoBall Darts" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "TwoBall Darts" }],
   },
 };
 
@@ -147,7 +147,7 @@ export default function StoryPage() {
               <p className="story-deck">Two darts. Eighteen holes.<br /><strong>One hell of a good time.</strong></p>
               <p className="story-intro">A couple of guys. A garage. A dartboard. And a Thursday-night idea that turned into something worth sharing.</p>
             </div>
-            <AssetImage src="/brand/twoball-logo.webp" alt="TwoBall Darts" width={1294} height={1216} className="story-hero-mark" fallback={<strong>TwoBall Darts</strong>} />
+            <AssetImage src="/brand/twoball-approved-symbol.svg" alt="TwoBall Darts" width={512} height={512} className="story-hero-mark" fallback={<strong>TwoBall Darts</strong>} />
           </div>
         </div>
 

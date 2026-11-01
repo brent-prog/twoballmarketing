@@ -17,7 +17,7 @@ export const brandSchema = {
   name: "TwoBall Darts",
   alternateName: ["Two Ball Darts", "2 Ball Darts", "2Ball Darts"],
   url: "https://twoballdarts.com/",
-  logo: "https://twoballdarts.com/brand/twoball-badge.webp",
+  logo: "https://twoballdarts.com/brand/twoball-approved-symbol.png",
 };
 
 export const gameSchema = {
@@ -27,7 +27,7 @@ export const gameSchema = {
   name: "TwoBall Darts",
   alternateName: ["Two Ball Darts", "2 Ball Darts", "2Ball Darts"],
   url: "https://twoballdarts.com/",
-  image: "https://twoballdarts.com/brand/twoball-badge.webp",
+  image: "https://twoballdarts.com/brand/twoball-approved-symbol.png",
   description:
     "A golf-style darts game played on a standard dartboard. Players play numbers 1 through 18 as holes, throw exactly two darts per hole and try to finish with the lowest total score.",
   genre: ["Darts game", "Golf-style scoring game"],

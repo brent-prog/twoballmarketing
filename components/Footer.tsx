@@ -7,10 +7,10 @@ export function Footer() {
         <div className="footer-brand">
           <a href="/" aria-label="TwoBall Darts home" style={{ display: "inline-block" }}>
           <AssetImage
-            src="/brand/twoball-logo-tm.svg"
+            src="/brand/twoball-approved-full.svg"
             alt="TwoBall Darts™"
-            width={2048}
-            height={762}
+            width={1200}
+            height={402}
             className="footer-logo"
             fallback={<strong>TwoBall Darts™</strong>}
           />

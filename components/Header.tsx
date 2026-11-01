@@ -6,10 +6,10 @@ export function Header() {
       <div className="shell header-inner">
         <a className="wordmark" href="/" aria-label="TwoBall Darts home">
           <AssetImage
-            src="/brand/twoball-logo-tm.svg"
+            src="/brand/twoball-approved-full.svg"
             alt="TwoBall Darts™"
-            width={2048}
-            height={762}
+            width={1200}
+            height={402}
             className="header-logo"
             priority
             fallback={

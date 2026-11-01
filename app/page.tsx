@@ -30,10 +30,10 @@ export default function HomePage() {
 
             <div className="hero-visual">
               <AssetImage
-                src="/brand/twoball-badge.webp"
-                alt="TwoBall Darts badge"
-                width={1294}
-                height={1216}
+                src="/brand/twoball-approved-symbol.svg"
+                alt="TwoBall Darts symbol"
+                width={512}
+                height={512}
                 className="hero-badge"
                 priority
                 fallback={<strong className="hero-logo-fallback">TwoBall Darts</strong>}
